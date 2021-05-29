@@ -1,9 +1,197 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
-}
-
-#greeting-container {
-  margin-top: 20px;
-}
+html, body{
+    height:100%;
+    width:100%;
+    }
+    
+    /* Navigation CSS */
+    #navbar{
+      width: 100%;
+      position: fixed;
+      top:0%;
+      display: flex;
+      justify-content: space-around;
+      background: #FC440F;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #links{
+        display: flex;
+        font-size: 20px;
+      margin: 5px;
+    }
+    .nav-link{
+      color: #000;
+      padding: 8px 16px;
+    }
+    .nav-link:hover {
+      color: white;
+      background: #555;
+    }
+    
+    /* Intro Section CSS */
+    #intro-section{
+      background-color: #0D3B66;
+      text-align: center;
+      padding-top: 0px;
+      margin-top: 0px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+    }
+    #intro{
+      font-size: 200%;
+      color: red;
+      padding-top: 50px;
+      text-align: center;
+    }
+    .pics{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .pic{
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+    }
+    
+    /* About Me Section CSS */
+    #about-me{
+        background-color: #00A5E0;
+        color: black;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .write-up{
+        border: 6px solid white;
+        border-style: dashed;
+    }
+    
+    
+    /*Facts Section CSS */
+    #facts-section{
+        background: #EF9CDA;
+        text-align: center;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #inst{
+        font-size: 200%;
+        color: red;
+        padding-top: 50px;
+        margin: 5%;
+    }
+    
+    
+    #greeting-container {
+      margin-top: 20px;
+      border: 5px solid #555;
+      border-style: ridge;
+    }
+    
+    /*Projects Section CSS */
+    #projects-section{
+        background: #FFDD4A;
+        height: 100vh;
+        text-align: center;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    #project-pics{
+        padding: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    #projects-text{
+        color: black;
+        font-size: 180%;
+        margin: 5%;
+        padding-top: 20px;
+    }
+    
+    
+    .project-tile{
+        width: 300px;
+    }
+    
+    /*Contact Section CSS */
+    #contact-section{
+      background: #1EFFBC;
+      text-align: center;
+      height: 100vh;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    #contact-text, #resume-text{
+      font-family: Bradley Hand, cursive;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 5%;
+      padding-top: 20px;
+    }
+    #contact-links{
+      display:flex;
+      justify-content: space-around;
+      margin-top: 3rem;
+    }
+    .icon{
+      width:170px;
+      height:100%;
+    }
+    
+    #resume-icon{
+        width: 200px;
+    }
+    
+    /*Projects Section CSS */
+    #projects-section{
+        background: #dcd0ff;
+        height: 100vh;
+        display: flex;
+    }
+    
+    /*Contact Section CSS */
+    #contact-section{
+      background: #66A182;
+      text-align: center;
+      height: 100vh;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    #contact-text, #resume-text{
+      font-family: Bradley Hand, cursive;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 5%;
+      padding-top: 20px;
+    }
+    #contact-links{
+      display:flex;
+      justify-content: space-around;
+      margin-top: 3rem;
+    }
+    .icon{
+      width:170px;
+      height:100%;
+    }
+    
+    #resume-icon{
+        width: 200px;
+        filter: grayscale(100%);
+    }
+    
