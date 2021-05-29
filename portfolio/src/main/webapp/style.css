@@ -157,41 +157,4 @@ html, body{
         width: 200px;
     }
     
-    /*Projects Section CSS */
-    #projects-section{
-        background: #dcd0ff;
-        height: 100vh;
-        display: flex;
-    }
-    
-    /*Contact Section CSS */
-    #contact-section{
-      background: #66A182;
-      text-align: center;
-      height: 100vh;
-      padding: 15px;
-      justify-content: center;
-      align-items: center;
-    }
-    #contact-text, #resume-text{
-      font-family: Bradley Hand, cursive;
-      font-size: 250%;
-      font-weight: bold;
-      margin: 5%;
-      padding-top: 20px;
-    }
-    #contact-links{
-      display:flex;
-      justify-content: space-around;
-      margin-top: 3rem;
-    }
-    .icon{
-      width:170px;
-      height:100%;
-    }
-    
-    #resume-icon{
-        width: 200px;
-        filter: grayscale(100%);
-    }
     
