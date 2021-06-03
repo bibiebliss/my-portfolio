@@ -158,7 +158,61 @@ section {
     color: #F7F3F3;
 }
     
-    
+ 
+/*Facts Section CSS */
+
+.facts-section {
+    font-family: 'Ubuntu', sans-serif;
+    background: url("images/pic2.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.facts-section .facts-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.facts-section .facts-content .left {
+    width: 50%;
+    padding: 13%;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+
+.facts-section .facts-content .left p {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5%;
+    color: #F7F3F3;
+    font-size: 1.563rem;
+}
+
+#greeting-container {
+    margin: 1.875rem 1.25rem 0px 1.875rem;
+    padding: 40px;
+    border: 3px solid #555;
+    border-spacing: 1.25rem;
+    border-style: ridge;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
     /*Facts Section CSS */
     #facts-section{
         background: #EF9CDA;
