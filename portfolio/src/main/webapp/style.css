@@ -69,6 +69,7 @@
     display: none;
 }
 
+
 /* Intro Section CSS */
 
 .home-section {
@@ -101,20 +102,63 @@
     font-size: 40px;
     margin: 5px 0;
 }
+
+
+/* About Me Section CSS */
+
+section {
+    padding: 150px 0;
+}
+
+.about-section {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: url("images/pic4.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.about-section .title {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.about-section .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    left: 92%;
+    bottom: 0px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.about-section .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-content .right {
+    width: 40%;
+}
+
+.about-section .about-content .right p {
+    text-align: justify;
+    font-weight: bold;
+    color: #F7F3F3;
+}
     
-    /* About Me Section CSS */
-    #about-me{
-        background-color: #00A5E0;
-        color: black;
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .write-up{
-        padding: 100px 20px 30px 20px;
-    }
+    
     /*Facts Section CSS */
     #facts-section{
         background: #EF9CDA;
