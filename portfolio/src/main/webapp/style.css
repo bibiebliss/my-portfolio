@@ -1,86 +1,218 @@
-html, body{
-    height:100%;
-    width:100%;
+* {
     margin: 0;
-    font-family: 'ZCOOL XiaoWei', serif;
-    }
-    
-    /* Navigation CSS */
-    #navbar{
-      width: 100%;
-      position: fixed;
-      top:0%;
-      display: flex;
-      justify-content: space-between;
-      background: #FC440F;
-      font-size: 2vw;
-      font-weight: bold;
-      font-family: 'ZCOOL QingKe HuangYou', cursive;
-    }
-    #links{
-        display: flex;
-        font-size: 2vw;
-        margin: 2px;
-    }
-    .nav-link{
-      color: #000;
-      padding: 8px 16px;
-    }
-    .nav-link:hover {
-      color: white;
-      background: #555;
-    }
-    
-    /* Intro Section CSS */
-    #intro-section{
-      background-color: #0D3B66;
-      text-align: center;
-      padding-top: 0px;
-      margin-top: 0px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 100%;
-    }
-    #intro{
-      font-size: 200%;
-      color: red;
-      padding-top: 3vh;
-      text-align: center;
-      
-    }
-    .pics-top{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 5em;
-    }
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 
-    .pics-bottom{
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: auto;
-    }
-    .pic{
-        width: 30vw;
-        height: 30vh;
-        object-fit: fill;
-        margin: 10px;
-    }
+
+/* Navigation CSS */
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar.sticky {
+    padding: 30px 0;
+    background: #00b4d8;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a,
+.navbar .logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar .links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .links li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease-in;
+}
+
+.navbar .links li a:hover {
+    color: #FC440F;
+}
+
+.navbar.sticky .logo .links li a:hover {
+    color: #fff;
+}
+
+.menu-bar {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Intro Section CSS */
+
+.home-section {
+    background-color: #0D3B66;
+    display: flex;
+    height: 100vh;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: url("images/pic1.jpg") no-repeat center;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-section .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home-section .content .text1 {
+    font-size: 27px;
+}
+
+.home-section .content .text2 {
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home-section .content .text3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+
+/* About Me Section CSS */
+
+section {
+    padding: 150px 0;
+}
+
+.about-section {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: url("images/pic4.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.about-section .title {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.about-section .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    left: 92%;
+    bottom: 0px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.about-section .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-content .right {
+    width: 40%;
+}
+
+.about-section .about-content .right p {
+    text-align: justify;
+    font-weight: bold;
+    color: #F7F3F3;
+}
     
-    /* About Me Section CSS */
-    #about-me{
-        background-color: #00A5E0;
-        color: black;
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .write-up{
-        padding: 100px 20px 30px 20px;
-    }
+ 
+/*Facts Section CSS */
+
+.facts-section {
+    font-family: 'Ubuntu', sans-serif;
+    background: url("images/pic2.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.facts-section .facts-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.facts-section .facts-content .left {
+    width: 50%;
+    padding: 13%;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+
+.facts-section .facts-content .left p {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5%;
+    color: #F7F3F3;
+    font-size: 1.563rem;
+}
+
+#greeting-container {
+    margin: 1.875rem 1.25rem 0px 1.875rem;
+    padding: 40px;
+    border: 3px solid #555;
+    border-spacing: 1.25rem;
+    border-style: ridge;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
     /*Facts Section CSS */
     #facts-section{
         background: #EF9CDA;
