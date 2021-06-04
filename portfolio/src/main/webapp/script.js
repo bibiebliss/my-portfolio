@@ -26,13 +26,22 @@ $(document).ready(function() {
         })
         //for the menubar
     $('.menu-bar').click(function() {
-        $('.navbar .links').toggleClass("active");
-        $('.menu-bar i').toggleClass("active");
-    })
+            $('.navbar .links').toggleClass("active");
+            $('.menu-bar i').toggleClass("active");
+        })
+        //for the project links
     $('.chart-wrapper').click(function() {
         $('.chart-wrapper').addClass("in-view");
 
-    });
+    })
+    $("#gh").on('click', function(event) {
+        event.preventDefault();
+        window.open("https://github.com/bibiebliss?tab=repositories", "_blank");
+    })
+    $("#cp").on('click', function(event) {
+        event.preventDefault();
+        window.open("https://codepen.io/bibiebliss", "_blank");
+    })
 });
 
 
