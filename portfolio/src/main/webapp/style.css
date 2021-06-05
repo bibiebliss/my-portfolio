@@ -370,6 +370,11 @@ ul {
     transition-delay: calc( (0.3s) + (0.3s) * 4);
 }
 
+.chart-wrapper.in-view .chart-skills li:nth-child(6)::before {
+    width: calc(40% - (120px));
+    transition-delay: 0.3s;
+}
+
 @keyframes pulse {
     0% {
         transform: scaleY(1);
