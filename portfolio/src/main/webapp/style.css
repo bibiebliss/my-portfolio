@@ -5,6 +5,15 @@
     text-decoration: none;
 }
 
+section {
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+}
+
 
 /* Navigation CSS */
 
@@ -73,15 +82,14 @@
 /* Intro Section CSS */
 
 .home-section {
-    background-color: #0D3B66;
     display: flex;
-    height: 100vh;
-    font-family: 'Montserrat Alternates', sans-serif;
     background: url("images/pic1.jpg") no-repeat center;
     color: white;
-    min-height: 500px;
+    font-family: 'Montserrat Alternates', sans-serif;
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
 }
 
 .home-section .max-width {
@@ -106,17 +114,9 @@
 
 /* About Me Section CSS */
 
-section {
-    padding: 150px 0;
-}
-
 .about-section {
-    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 110px 0;
     background: url("images/pic4.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    min-height: 500px;
 }
 
 .about-section .title {
@@ -141,7 +141,8 @@ section {
     transform: translateX(-50%);
 }
 
-.about-section .about-content {
+.about-section .about-content,
+.skills-section .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -157,20 +158,17 @@ section {
     font-weight: bold;
     color: #F7F3F3;
 }
-    
- 
+
+
 /*Facts Section CSS */
 
 .facts-section {
-    font-family: 'Ubuntu', sans-serif;
     background: url("images/pic2.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    min-height: 500px;
+    padding: 110px 0;
 }
 
 .facts-section .facts-content {
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-wrap: wrap;
     align-items: left;
@@ -213,89 +211,398 @@ section {
 }
 
 
-    /*Facts Section CSS */
-    #facts-section{
-        background: #EF9CDA;
-        text-align: center;
-        color: white;
+/* Skils Section CSS */
+
+.skills-section {
+    background: url("images/pic3.jpg") no-repeat center;
+    padding: 1.2rem;
+}
+
+.skills-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.skills-section .head {
+    position: relative;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    padding-left: 80%;
+    padding-top: 10%;
+}
+
+.skills-section .head::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    left: 96%;
+    bottom: 0px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.skills-section a {
+    display: inline-block;
+    background: #00b4d8;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 110px;
+    margin-left: 75%;
+    border-radius: 6px;
+    border: 2px solid #00b4d8;
+    transition: all 0.3s ease;
+}
+
+.skills-section a:hover {
+    color: #00b4d8;
+    background: none;
+}
+
+
+/*chart */
+
+ul {
+    list-style: none;
+}
+
+.chart-wrapper {
+    width: 95%;
+    max-width: 500px;
+    margin-top: 70px;
+    margin-left: 60%;
+}
+
+.chart-wrapper,
+.chart-wrapper .chart-skills li,
+.chart-wrapper .chart-levels li {
+    position: relative;
+}
+
+.chart-wrapper .chart-levels li {
+    flex-grow: 1;
+    border-right: 1px solid rgba(211, 211, 211, 0.3);
+}
+
+.chart-wrapper .chart-levels li span {
+    position: absolute;
+}
+
+.chart-wrapper .chart-skills span {
+    display: inline-block;
+    width: 120px;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.chart-wrapper .chart-levels span {
+    bottom: 0;
+    transform: translateY(50px) rotate(45deg);
+    padding: 10px;
+    width: 100%;
+}
+
+.chart-wrapper .chart-levels {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 120px;
+}
+
+.chart-wrapper .chart-levels li:last-child {
+    border-right: 0;
+}
+
+.chart-wrapper .chart-skills li::before,
+.chart-wrapper .chart-skills li::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 120px;
+    height: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+}
+
+.chart-wrapper .chart-skills li::after {
+    width: calc(100% - 120px);
+    background: rgba(211, 211, 211, 0.3);
+}
+
+.chart-wrapper .chart-skills li::before {
+    width: 0;
+    background: #009dd3;
+    transition: width 0.65s ease-out;
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(1)::before {
+    width: calc(85% - (120px));
+    transition-delay: 0.3s;
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(2)::before {
+    width: calc(70% - 120px);
+    transition-delay: calc( 0.3s + 0.3s);
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(3)::before {
+    width: calc(48% - 120px);
+    transition-delay: calc( (0.3s) + (0.3s) * 2);
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(4)::before {
+    width: calc(85% - 120px);
+    transition-delay: calc( (0.3s) + (0.3s) * 3);
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(5)::before {
+    width: calc(50% - 120px);
+    transition-delay: calc( (0.3s) + (0.3s) * 4);
+}
+
+.chart-wrapper.in-view .chart-skills li:nth-child(6)::before {
+    width: calc(40% - (120px));
+    transition-delay: 0.3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.65);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+/*Projects Section CSS */
+
+.projects-section {
+    background-color: black;
+    padding: 100px 0;
+}
+
+.projects-section .title {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.projects-section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.projects-section .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-section .projects-content .tile {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projects-section .projects-content .tile i {
+    font-size: 50px;
+    color: #00b4d8;
+    transition: color 0.3s ease;
+}
+
+.projects-section .projects-content .tile:hover i {
+    color: #fff;
+}
+
+.projects-section .projects-content .tile .box {
+    transition: all 0.3s ease;
+}
+
+.projects-section .projects-content .tile:hover {
+    background: #00b4d8;
+}
+
+.projects-section .projects-content .tile:hover .box {
+    transform: scale(1.05);
+}
+
+.projects-section .projects-content .tile .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/*Contact Section CSS */
+
+.contact-section {
+    background: url(images/pic5.jpg) no-repeat center;
+    height: 100vh;
+    padding: 15px;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+}
+
+.contact-section .c-content {
+    margin-left: 2%;
+    margin-right: 80%;
+    margin-top: 30%;
+}
+
+.contact-section .c-text {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.contact-section .c-text::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+#contact-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.icon {
+    width: 170px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+
+/* responsive media query code */
+
+@media (max-width: 1104px) {
+    .home-section .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-bar {
+        display: block;
+        z-index: 999;
+    }
+    .menu-bar i.active:before {
+        content: "\f00d";
+    }
+    .navbar .links {
+        position: fixed;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        background: black;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .links.active {
+        left: 0;
+    }
+    .navbar .links li {
+        display: block;
+    }
+    .navbar .links li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home-section .content .text2 {
+        font-size: 70px;
+    }
+    .home-section .content .text3 {
+        font-size: 35px;
+    }
+    .about-section .about-content .right {
+        font-size: 4%;
+    }
+    .about-section .title::before {
+        left: 87%;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    .projects-section .projects-content .tile {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home-section .content .text2 {
+        font-size: 60px;
+    }
+    .home-section .content .text3 {
+        font-size: 32px;
+    }
+    .projects-section .projects-content .tile {
         width: 100%;
     }
-    
-    #inst{
-        font-size: 200%;
-        color: red;
-        padding-top: 50px;
-        margin: 8%;
+}
+
+@media (max-width: 500px) {
+    .home-section .content .text2 {
+        font-size: 50px;
     }
-    
-    #greeting-container {
-      margin: 30px 20px 20px 30px;
-      padding: 10px;
-      border: 3px solid #555;
-      border-spacing: 30px;
-      border-style: ridge;
-    }
-    
-    /*Projects Section CSS */
-    #projects-section{
-        background: #FFDD4A;
-        height: 100vh;
-        text-align: center;
-        padding: 20px;  
-        flex-direction: column;
-    }
-    
-    #project-pics{
-        padding: 10px;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-evenly;
-    }
-    
-    #projects-text{
-        color: black;
-        font-size: 180%;
-        margin: 10%;
-        padding-top: 20px;
-    }
-    
-    
-    .project-tile{
-        width: 300px;
-    }
-    
-    /*Contact Section CSS */
-    #contact-section{
-      background: #1EFFBC;
-      text-align: center;
-      height: 100vh;
-      padding: 15px;
-      justify-content: center;
-      align-items: center;
-    }
-    #contact-text, #resume-text{
-      font-family: Bradley Hand, cursive;
-      font-size: 250%;
-      font-weight: bold;
-      margin: 5%;
-      padding-top: 20px;
-    }
-    #contact-links{
-      display:flex;
-      justify-content: space-around;
-      margin-top: 3rem;
-    }
-    .icon{
-      width:170px;
-      height:100%;
-    }
-    
-    #resume-icon{
-        width: 15%;
-        height: 20%;
-    }
-    
+}
