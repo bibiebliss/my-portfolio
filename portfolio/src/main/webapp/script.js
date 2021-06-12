@@ -16,7 +16,7 @@
  * Adds a random greeting to the page.
  */
 
-$(document).ready(function () {
+ $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
@@ -56,22 +56,12 @@ $(document).ready(function () {
     })
 });
 
-
-
-function addRandomGreeting() {
-    const greetings = ['Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.', 'There’s a lot of beauty in ordinary things. Isn’t that kind of the point?', 'Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way.', 'I guess I’ve been working so hard, I forgot what it’s like to be hardly working.', 'I am Beyonce, always.'];
-
-    // Pick a random greeting.
-    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-    // Add it to the page.
-    const greetingContainer = document.getElementById('greeting-container');
-    greetingContainer.innerText = greeting;
-}
-
 async function showContent() {
     const response = await fetch("/hello");
-    const responseText = await response.text();
+    const responseText = await response.json();
+    console.log(responseText);
+    const choice = responseText[Math.floor(Math.random() * responseText.length)];
+
     const responseCont = document.getElementById("response-container");
-    responseCont.innerText = responseText;
+    responseCont.innerText = choice;
 }
