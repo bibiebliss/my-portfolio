@@ -14,7 +14,6 @@ section {
     min-height: 500px;
 }
 
-
 /* Navigation CSS */
 
 .max-width {
@@ -43,8 +42,7 @@ section {
     justify-content: space-between;
 }
 
-.navbar .logo a,
-.navbar .logo {
+.navbar .logo a, .navbar .logo {
     font-size: 35px;
     font-weight: 600;
     color: white;
@@ -78,7 +76,6 @@ section {
     display: none;
 }
 
-
 /* Intro Section CSS */
 
 .home-section {
@@ -111,7 +108,6 @@ section {
     margin: 5px 0;
 }
 
-
 /* About Me Section CSS */
 
 .about-section {
@@ -141,8 +137,7 @@ section {
     transform: translateX(-50%);
 }
 
-.about-section .about-content,
-.skills-section .skills-content {
+.about-section .about-content, .skills-section .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -165,7 +160,6 @@ section {
     font-weight: bold;
     color: #F7F3F3;
 }
-
 
 /*Facts Section CSS */
 
@@ -247,7 +241,6 @@ background: #222;
     transform: scale(1.05);
 }
 
-
 /* Skils Section CSS */
 
 .skills-section {
@@ -302,7 +295,6 @@ background: #222;
     background: none;
 }
 
-
 /*chart */
 
 ul {
@@ -316,9 +308,7 @@ ul {
     margin-left: 60%;
 }
 
-.chart-wrapper,
-.chart-wrapper .chart-skills li,
-.chart-wrapper .chart-levels li {
+.chart-wrapper, .chart-wrapper .chart-skills li, .chart-wrapper .chart-levels li {
     position: relative;
 }
 
@@ -359,8 +349,7 @@ ul {
     border-right: 0;
 }
 
-.chart-wrapper .chart-skills li::before,
-.chart-wrapper .chart-skills li::after {
+.chart-wrapper .chart-skills li::before, .chart-wrapper .chart-skills li::after {
     content: "";
     position: absolute;
     top: 25%;
@@ -378,7 +367,7 @@ ul {
 
 .chart-wrapper .chart-skills li::before {
     width: 0;
-    background: #009dd3;
+    background: #00b4d8;
     transition: width 0.65s ease-out;
 }
 
@@ -424,7 +413,6 @@ ul {
     }
 }
 
-
 /*Projects Section CSS */
 
 .projects-section {
@@ -432,7 +420,7 @@ ul {
     padding: 100px 0;
 }
 
-.projects-section .title {
+.projects-section .title, .contact-section .title {
     font-family: 'Ubuntu', sans-serif;
     position: relative;
     text-align: center;
@@ -442,7 +430,7 @@ ul {
     padding-bottom: 20px;
 }
 
-.projects-section .title::before {
+.projects-section .title::before, .contact-section .title::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -470,13 +458,13 @@ ul {
     transition: all 0.3s ease;
 }
 
-.projects-section .projects-content .tile i {
+.projects-section .projects-content .tile i, .contact-section .c-content .right i {
     font-size: 50px;
     color: #00b4d8;
     transition: color 0.3s ease;
 }
 
-.projects-section .projects-content .tile:hover i {
+.projects-section .projects-content .tile:hover i, .contact-section .c-content .right i:hover {
     color: #fff;
 }
 
@@ -498,7 +486,6 @@ ul {
     margin: 10px 0 7px 0;
 }
 
-
 /*Contact Section CSS */
 
 .contact-section {
@@ -506,57 +493,104 @@ ul {
     height: 100vh;
     padding: 15px;
     justify-content: center;
-    align-items: flex-start;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     min-height: 500px;
-    display: flex;
 }
 
 .contact-section .c-content {
-    margin-left: 2%;
-    margin-right: 80%;
-    margin-top: 30%;
-}
-
-.contact-section .c-text {
-    font-family: 'Ubuntu', sans-serif;
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-}
-
-.contact-section .c-text::before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 200px;
-    height: 3px;
-    background: white;
-    transform: translateX(-50%);
-}
-
-#contact-links {
     display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
+    justify-content: space-between;
+    padding-top: 12rem;
+    flex-wrap: wrap;
 }
 
-.icon {
-    width: 170px;
-    height: 100%;
-    transition: all 0.3s ease;
+.contact-section .c-content .right i {
+    font-size: 100px;
 }
 
-.icon:hover {
+.contact-section .c-content .right i:hover {
     transform: scale(1.05);
 }
 
+.contact-section .title {
+    margin-bottom: 0;
+    padding-top: 15%;
+    padding-left: 20px;
+}
+
+.contact-section .c-content .text {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contact-section .c-content .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .left form .fields {
+    display: flex;
+}
+
+.contact-section .left form .field, .contact-section .left form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-section .left form .name {
+    margin-right: 10px;
+}
+
+.contact-section .left form .email {
+    margin-left: 10px;
+}
+
+.contact-section .left form .text-area {
+    height: 80px;
+    width: 100%;
+}
+
+.contact-section .left form .field input, .contact-section .left form .text-area textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.contact-section .left form .text-area textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact-section .left form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact-section .left form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00b4d8;
+    background: #00b4d8;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section .left form .button button:hover {
+    color: #00b4d8;
+    background: none;
+}
 
 /* responsive media query code */
 
@@ -620,6 +654,26 @@ ul {
     .projects-section .projects-content .tile {
         width: calc(50% - 10px);
         margin-bottom: 20px;
+    }
+    .contact-section .c-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .contact-section .c-content {
+        padding-top: 8rem;
+    }
+    .contact-section .c-content .right {
+        flex-direction: row;
+    }
+    .chart-wrapper, .skills-section a {
+        margin-left: 10%;
+    }
+    .skills-section .head {
+        padding-left: 30%;
+        padding-top: 15%;
+    }
+    .skills-section .head::before {
+        left: 85%;
     }
 }
 

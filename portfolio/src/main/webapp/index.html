@@ -182,38 +182,45 @@
 
 
 
-     <!-- Contact Section -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact-section">
         <div class="max-width">
+            <h2 class="title">Contact Me</h2>
             <div class="c-content">
-                <div class="left">
+                <div class="column left">
+                    <div class="text">Message me</div>
                     <form action="/form-handler" method="POST">
-                        <div class="field">
-                            <div class="name">
+                        <div class="fields">
+                            <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" required>
                             </div>
-                            <div class="email">
+                            <div class="field email">
                                 <input type="email" name="Email" placeholder="Email" required>
                             </div>
-                            <div class="field">
-                                <input type="text" name="Subject" placeholder="Subject" required>
-                            </div>
-                            <div class="text-area">
-                                <textarea cols="30" rows="10" name="Description" placeholder="Description"></textarea>
-                            </div>
-                            <div class="button">
-                                <button type="submit">Send Message</button>
-                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="Subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field text-area">
+                            <textarea cols="30" rows="10" name="Description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send Message</button>
                         </div>
                     </form>
                 </div>
-                <div class="right">
-                    <a id="profile-link" href="https://www.linkedin.com/in/blessing-babajide/" target="_blank">
-                        <img src="images/linkedin.png" class="icon">
-                    </a>
-                    <a id="profile-link" href="mailto:bibiebabajide@gmail.com" target="_blank">
-                        <img src="images/email.jpeg" class="icon">
-                    </a>
+
+                <div class="column right">
+                    <div>
+                        <a href="https://www.linkedin.com/in/blessing-babajide/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:bibiebabajide@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
