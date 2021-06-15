@@ -10,7 +10,8 @@
     <script src="script.js"></script>
     <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -53,21 +54,30 @@
                 <div class="left"></div>
                 <div class="right">
                     <p>
-                        I'm originally from Nigeria, a country in West Africa. In my free time, I like to read all sorts of books, write/watch slam poetry, continuously attempt to play the piano, and catch up on sleep!
+                        I'm originally from Nigeria, a country in West Africa. In my free time, I like to read all sorts
+                        of books, write/watch slam poetry, continuously attempt to play the piano, and catch up on
+                        sleep!
                     </p>
                     <br />
                     <hr>
                     <br />
                     <p>
-                        I currently go to the University of Rochester in Rochester, NY where I'm a double major in Computer Science and Brain and Cognitive Sciences with a minor in Psychology. I'm very active on campus because I like to keep busy and believe college shouldnt
-                        be just about academics. I'm a member of the Google DSC Tech Team and also a leader at an amazing poetry club called No Disclaimers. Apart from my extra-curriculars, I work as a Teaching Assistant to an Intro to Python class and
-                        I'm a tutor for the same class in addition to Intro to Psychology, Statistics and a class on foundations of behavior.
+                        I currently go to the University of Rochester in Rochester, NY where I'm a double major in
+                        Computer Science and Brain and Cognitive Sciences with a minor in Psychology. I'm very active on
+                        campus because I like to keep busy and believe college shouldnt
+                        be just about academics. I'm a member of the Google DSC Tech Team and also a leader at an
+                        amazing poetry club called No Disclaimers. Apart from my extra-curriculars, I work as a Teaching
+                        Assistant to an Intro to Python class and
+                        I'm a tutor for the same class in addition to Intro to Psychology, Statistics and a class on
+                        foundations of behavior.
                     </p>
                     <br />
                     <hr>
                     <br />
                     <p>
-                        Google SPS was the first opportunity I ever had that was closest to a technical internship (I've had research internships before) I'm very excited to learn about frontend and backend dev, working on a team project and also getting to meet Googlers!
+                        Google SPS was the first opportunity I ever had that was closest to a technical internship (I've
+                        had research internships before) I'm very excited to learn about frontend and backend dev,
+                        working on a team project and also getting to meet Googlers!
                     </p>
                 </div>
 
@@ -172,38 +182,45 @@
 
 
 
-     <!-- Contact Section -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact-section">
         <div class="max-width">
+            <h2 class="title">Contact Me</h2>
             <div class="c-content">
-                <div class="left">
+                <div class="column left">
+                    <div class="text">Message me</div>
                     <form action="/form-handler" method="POST">
-                        <div class="field">
-                            <div class="name">
+                        <div class="fields">
+                            <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" required>
                             </div>
-                            <div class="email">
+                            <div class="field email">
                                 <input type="email" name="Email" placeholder="Email" required>
                             </div>
-                            <div class="field">
-                                <input type="text" name="Subject" placeholder="Subject" required>
-                            </div>
-                            <div class="text-area">
-                                <textarea cols="30" rows="10" name="Description" placeholder="Description"></textarea>
-                            </div>
-                            <div class="button">
-                                <button type="submit">Send Message</button>
-                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="Subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field text-area">
+                            <textarea cols="30" rows="10" name="Description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send Message</button>
                         </div>
                     </form>
                 </div>
-                <div class="right">
-                    <a id="profile-link" href="https://www.linkedin.com/in/blessing-babajide/" target="_blank">
-                        <img src="images/linkedin.png" class="icon">
-                    </a>
-                    <a id="profile-link" href="mailto:bibiebabajide@gmail.com" target="_blank">
-                        <img src="images/email.jpeg" class="icon">
-                    </a>
+
+                <div class="column right">
+                    <div>
+                        <a href="https://www.linkedin.com/in/blessing-babajide/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:bibiebabajide@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
