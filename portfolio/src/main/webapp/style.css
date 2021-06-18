@@ -171,6 +171,7 @@ section {
 .facts-section .facts-content {
     font-family: 'Ubuntu', sans-serif;
     display: flex;
+    flex-direction: column;    
     flex-wrap: wrap;
     align-items: left;
     margin-left: 2%;
