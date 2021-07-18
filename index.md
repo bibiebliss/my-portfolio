@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+    <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    <!-- Navigation/Heading -->
+    <nav class="navbar">
+        <div class="max-width">
+            <p class="logo">Blessing Babajide</p>
+            <ul class="links">
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#about-section">About Me</a></li>
+                <li><a href="#facts-section">Fun Facts </a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#contact-section">Contact me</a></li>
+            </ul>
+            <div class="menu-bar">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home-section" id="home-section">
+        <div class="max-width">
+            <div class="content">
+                <div class="text1">Hello, my name is</div>
+                <div class="text2">Blessing Babajide (Bibie)</div>
+                <div class="text3">Welcome to my Portfolio</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About me Section -->
+    <section class="about-section" id="about-section">
+        <div class="max-width">
+            <div class="about-content">
+                <div class="left"></div>
+                <div class="right">
+                    <h2 class="title">About Me</h2>
+                    <p>
+                        I'm originally from Nigeria, a country in West Africa. In my free time, I like to read all sorts
+                        of books, write/watch slam poetry, continuously attempt to play the piano, and catch up on
+                        sleep!
+                    </p>
+                    <br />
+                    <hr>
+                    <br />
+                    <p>
+                        I currently go to the University of Rochester in Rochester, NY where I'm a double major in
+                        Computer Science and Brain and Cognitive Sciences with a minor in Psychology. I'm very active on
+                        campus because I like to keep busy and believe college shouldnt
+                        be just about academics. I'm a member of the Google DSC Tech Team and also a leader at an
+                        amazing poetry club called No Disclaimers. Apart from my extra-curriculars, I work as a Teaching
+                        Assistant to an Intro to Python class and
+                        I'm a tutor for the same class in addition to Intro to Psychology, Statistics and a class on
+                        foundations of behavior.
+                    </p>
+                    <br />
+                    <hr>
+                    <br />
+                    <p>
+                        Google SPS was the first opportunity I ever had that was closest to a technical internship (I've
+                        had research internships before) I'm very excited to learn about frontend and backend dev,
+                        working on a team project and also getting to meet Googlers!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Facts Section -->
+    <section class="facts-section" id="facts-section">
+        <div class="max-width">
+            <div class="facts-content">
+                <div class="left">
+                    <p>Click here to get a random work/research experience of mine!</p>
+                    <button onclick="showContent()">Click Me!</button>
+                    <div id="response-container"></div>
+                </div>
+                <div class="right">
+                    <div id="chart-container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills-section">
+        <div class="skills-content">
+            <h2 class="head">Skills</h2>
+            <div class="chart-wrapper">
+                <ul class="chart-skills">
+                    <li>
+                        <span>CSS/HTML</span>
+                    </li>
+                    <li>
+                        <span>Java</span>
+                    </li>
+                    <li>
+                        <span>JavaScript</span>
+                    </li>
+                    <li>
+                        <span>Python</span>
+                    </li>
+                    <li>
+                        <span>Git</span>
+                    </li>
+                    <li>
+                        <span>Swift</span>
+                    </li>
+                </ul>
+                <ul class="chart-levels">
+                    <li>
+                        <span>Newbie</span>
+                    </li>
+                    <li>
+                        <span>Beginner</span>
+                    </li>
+                    <li>
+                        <span>Competent</span>
+                    </li>
+                    <li>
+                        <span>Proficient</span>
+                    </li>
+                    <li>
+                        <span>Advanced</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#">Download CV</a>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects-section">
+        <div class="max-width">
+            <h2 class="title">My Projects</h2>
+            <div class="projects-content">
+                <div class="tile" id="gh">
+                    <div class="box">
+                        <i class="fa fa-github"></i>
+                        <div class="text">Github</div>
+                        <p>My Github includes the bulk of my technical projects and organization projects</p>
+                    </div>
+                </div>
+                <div class="tile" id="cp">
+                    <div class="box">
+                        <a href=""><i class="fa fa-codepen"></i></a>
+                        <div class="text">Codepen</div>
+                        <p>My Codepen contains projects done in line with FreeCodeCamp certifications</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="box">
+                        <i class="fa fa-laptop"></i>
+                        <div class="text">This portfolio!</div>
+                        <p>I coded this entire portfolio by myself during the Google SPS Program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-section">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+            <div class="c-content">
+                <div class="column left">
+                    <div class="text">Message me</div>
+                    <form action="/form-handler" method="POST">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="Name" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" name="Email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="Subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field text-area">
+                            <textarea cols="30" rows="10" name="Description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="column right">
+                    <div>
+                        <a href="https://www.linkedin.com/in/blessing-babajide/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:bibiebabajide@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
