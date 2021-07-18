@@ -1,5 +1,5 @@
 ---
-permalink: /index.html
+permalink: /main/portfolio/src/main/webapp/index.html
 ---
 # Google Software Product Sprint
 
